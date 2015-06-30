@@ -1,0 +1,138 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    tools:context="com.taplytics.example.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/TaplyticsToolbar">
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="10dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="56dp"
+                android:src="@drawable/taplytics_grey"/>
+
+            <com.taplytics.example.views.CustomFontsTextView
+                android:id="@+id/textView1"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/mainText"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                app:fontName="avenir.ttf"/>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/grey"
+                android:orientation="vertical"
+                android:visibility="invisible"/>
+
+
+            <com.taplytics.example.views.CustomFontsTextView
+                android:id="@+id/source_explanation"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="View the source code for each example to see how to use Taplytics."
+                android:textColor="@color/grey"
+                android:textSize="11sp"
+                app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsButton
+                android:id="@+id/code_experiments_button"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/source_explanation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/transparent_button_state"
+                android:text="@string/code_experiments_button_text"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsButton
+                android:id="@+id/user_information_button"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/code_experiments_button"
+                android:layout_below="@+id/code_experiments_button"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/transparent_button_state"
+                android:text="@string/user_attributes_button_text"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsButton
+                android:id="@+id/events_button"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/user_information_button"
+                android:layout_below="@+id/user_information_button"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/transparent_button_state"
+                android:text="@string/events_button_text"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsButton
+                android:id="@+id/visual_editor_button"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/user_information_button"
+                android:layout_below="@+id/events_button"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/transparent_button_state"
+                android:text="@string/visual_experiments_button_text"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:fontName="avenir.ttf"/>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

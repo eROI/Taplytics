@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Taplytics Example</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="mainText">An example app with the Taplyitcs Android SDK already integrated</string>
+    <string name="what_text">What is it?</string>
+    <string name="in_action_text">In action.</string>
+    <string name="events_button_text">EVENTS</string>
+
+    <!-- Code Experiments -->
+    <string name="code_experiment_text">Taplytics offers code-based experiments, which allow you to A/B test nearly anything within your app. From game variables, to small text changes.</string>
+    <string name="code_experiment_action">Give it a try, the following dialog is modified with a code experiment. \nYou can simply shake the device to see a menu with experiments and variations. </string>
+    <string name="code_experiments_button_text">CODE EXPERIMENTS</string>
+    <string name="check_it_out">check it out</string>
+
+    <!-- User Attributes -->
+    <string name="user_attributes_button_text">USER ATTRIBUTES</string>
+    <string name="user_attributes_text">With the SDK, you can pass Taplytics many kinds of user attributes, such as their email, id, gender, age, etc. \n\nYou can also send custom data, such as "paid subscription", or any other json data. \nModify and apply your experiments based on this data! \n\nThis page has sent some basic information to your Taplytics panel, see for yourself!</string>
+
+    <!-- Code Experiments -->
+    <string name="events_title">EVENT TRACKING</string>
+    <string name="event_text">Taplytics allows you to log unique events that happen within your app. \n\nEvents such as a purchase going through, social sharing, and simple button clicks can be tracked with one small function. </string>
+    <string name="event_action">Give it a try, pressing the button will track a button press event, with the number of times its been pressed this session on this screen. </string>
+    <string name="send_an_event">send an event</string>
+
+
+    <!-- Visual Experiments -->
+    <string name="visual_experiments_button_text">VISUAL EXPERIMENTS</string>
+    <string name="visual_experiment_text">Taplytics allows you to A/B test your app without writing a single line of code using visual experiments.</string>
+    <string name="visual_experiment_action">Give it a try. On your Taplytics dashboard, click "add element to variation", and then click an element on the app. \n\nFrom the dashboard, edit the settings on the view, select that variation, and check out your updates live!</string>
+
+
+</resources>

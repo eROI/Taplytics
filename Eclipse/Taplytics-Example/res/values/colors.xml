@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="transparent" type="color">#00000000</item>
+    <item name="grey" type="color">#dee0e0</item>
+    <item name="text_grey" type="color">#92949c</item>
+    <item name="text_dark_grey" type="color">#323232</item>
+    <item name="light_purple" type="color">#7557a3</item>
+    <item name="dark_purple" type="color">#654a94</item>
+    <item name="grey_translucent" type="color">#30dee0e0</item>
+
+</resources>

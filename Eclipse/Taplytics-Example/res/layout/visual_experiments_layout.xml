@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:paddingBottom="10dp"
+            tools:context="com.taplytics.example.VisualActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image5"/>
+
+            <com.taplytics.example.views.CustomFontsTextView
+                android:id="@+id/title"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                android:text="@string/visual_experiments_button_text"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:fontName="avenir_bold.ttf"/>
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/TaplyticsToolbar">
+        </android.support.v7.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_layout"
+            android:layout_marginTop="20dp">
+
+            <com.taplytics.example.views.CustomFontsTextView
+                android:id="@+id/visual_experiments_what"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/what_text"
+                android:textColor="@color/text_dark_grey"
+                android:textSize="19sp"
+                app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsTextView
+                android:id="@+id/visual_experiments_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/visual_experiments_what"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/visual_experiment_text"
+                android:textColor="@color/text_grey"
+                android:textSize="15sp"
+                app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsTextView
+                android:id="@+id/visual_experiments_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/visual_experiments_text"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/in_action_text"
+                android:textColor="@color/text_dark_grey"
+                android:textSize="19sp"
+                app:fontName="avenir.ttf"/>
+
+            <com.taplytics.example.views.CustomFontsTextView
+                android:id="@+id/visual_experiments_action_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/visual_experiments_action"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/visual_experiment_action"
+                android:textColor="@color/text_grey"
+                android:textSize="15sp"
+                app:fontName="avenir.ttf"/>
+        </RelativeLayout>
+
+        <com.taplytics.example.views.CustomFontsButton
+            android:id="@+id/visual_experiment_dialog_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bottom_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/purple_button_state"
+            android:text="An example view"
+            android:textColor="@android:color/white"
+            app:fontName="avenir.ttf"/>
+    </RelativeLayout>
+
+</ScrollView>

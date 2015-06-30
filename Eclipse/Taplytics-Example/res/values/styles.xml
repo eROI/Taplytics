@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+    </style>
+
+    <style name="MyTheme" parent="AppBaseTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <style name="TaplyticsToolbar" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="android:textColorPrimary">@color/text_grey</item>
+
+        <item name="android:textColorPrimaryInverse">@color/text_grey</item>
+
+        <item name="actionMenuTextColor">@color/text_grey</item>
+
+        <item name="android:textColorSecondary">@color/switch_thumb_material_light</item>
+
+        <item name="android:background">@color/transparent</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.taplytics.taplyticsexample"
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
+        main.assets.srcDirs += 'src/main/assets'
+    }
+}
+repositories {
+    maven { url 'https://github.com/taplytics/Taplytics-Android-SDK/raw/master/AndroidStudio/' }
+}
+
+
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.2.0'
+//Taplytics
+    compile('com.taplytics.sdk:taplytics:+@aar')
+
+//Taplytics Dependencies
+    compile("com.mcxiaoke.volley:library:+")
+    compile("com.squareup.okhttp:okhttp-urlconnection:+")
+    compile("com.squareup.okhttp:okhttp:+")
+
+//Note: socket connections are only always on in debug builds.
+    compile("com.github.nkzawa:socket.io-client:+")
+    compile("com.github.nkzawa:engine.io-client:+")
+
+}
+
+/**
+ * Run this to copy all of the sources of the project from this project into the Eclipse project.
+ */
+task copySources(type: Copy) {
+    from('src/main/java/com')
+    into('../../../Eclipse/Taplytics-Example/src/com')
+}
+
+task copyManifest(type: Copy) {
+    from('src/main/')
+    into('../../../Eclipse/Taplytics-Example/')
+    include('AndroidManifest.xml')
+}
+
+task clearOld(type: Delete) {
+    delete '../../../Eclipse/Taplytics-Example/src/'
+    delete '../../../Eclipse/Taplytics-Example/AndroidManifest.xml'
+    delete '../../../Eclipse/Taplytics-Example/res'
+}
+
+task copyResources(type: Copy) {
+    from('src/main/res')
+    into('../../../Eclipse/Taplytics-Example/res')
+}
+
+copySources.dependsOn(clearOld, copyManifest, copyResources)
