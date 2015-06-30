@@ -24,7 +24,7 @@ public class ExampleApplication extends Application {
 
 		// Supply your api key here and thats it! You're set up with basic tracking and features!
 		// Way more is to come down the line. Expect this to catch up to the iOS sdk soon!
-		Taplytics.startTaplytics(this, "Your API key");
+		Taplytics.startTaplytics(this, "09ad233a09695917736a3bed49aee0748db19a03");
 	}
 
 }

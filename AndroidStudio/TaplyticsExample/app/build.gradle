@@ -30,21 +30,26 @@ repositories {
 
 
 
-dependencies {
-    compile 'com.android.support:appcompat-v7:22.2.0'
-//Taplytics
-    compile('com.taplytics.sdk:taplytics:+@aar')
+dependencies {                                                                   
+    //Taplytics                                                                        
+    compile("com.taplytics.sdk:taplytics:+@aar")  
 
-//Taplytics Dependencies
+    //Dependencies for taplytics
     compile("com.mcxiaoke.volley:library:+")
-    compile("com.squareup.okhttp:okhttp-urlconnection:+")
-    compile("com.squareup.okhttp:okhttp:+")
 
-//Note: socket connections are only always on in debug builds.
-    compile("com.github.nkzawa:socket.io-client:+")
-    compile("com.github.nkzawa:engine.io-client:+")
+    //Excluding org.json due to compiler warnings
+    //socket.io connections only made on debug devices OR if making live changes to a release build.
+    //No socket.io connection will be made on your release devices unless explicitly told to do so. 
+    compile("com.github.nkzawa:socket.io-client:+") {
+            exclude group: 'org.json'
+    }
+    compile("com.github.nkzawa:engine.io-client:+") {
+            exclude group: 'org.json'
+    }
 
-}
+    //Only include this if you wish to enable push notifications:
+    compile("com.google.android.gms:play-services-gcm:7.5.0")
+} 
 
 /**
  * Run this to copy all of the sources of the project from this project into the Eclipse project.
