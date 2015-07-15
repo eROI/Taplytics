@@ -31,14 +31,15 @@
                 android:id="@+id/title"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="35dp"
                 android:gravity="center"
                 android:paddingTop="30dp"
                 android:text="@string/code_experiments_button_text"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
-                app:fontName="avenir_bold.ttf"/>
+                app:fontName="avenir_bold.ttf"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <android.support.v7.widget.Toolbar

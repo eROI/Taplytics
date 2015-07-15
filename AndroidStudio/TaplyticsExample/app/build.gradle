@@ -46,6 +46,8 @@ dependencies {
     compile("com.github.nkzawa:engine.io-client:+") {
             exclude group: 'org.json'
     }
+	
+	compile("com.android.support:appcompat-v7:22.2.0”)
 
     //Only include this if you wish to enable push notifications:
     compile("com.google.android.gms:play-services-gcm:7.5.0")
